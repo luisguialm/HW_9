@@ -54,8 +54,6 @@ Top_country<-as.character(co2perCap$country[top]) #Qatar wasthe highest emiter i
 ```
 The largest emiter per capita was `r Top_country`. Their emission have been higher than the US only in 2014. Results are shown in the following table. 
 ```{r, echo=FALSE}
-top<-which.max(co2perCap$X2014)
-Top_country<-as.character(co2perCap$country[top]) #Qatar wasthe highest emiter in 2014. 
 QT<-co2perCap$country=="Qatar" # finding the index were Qatar is true/
 US<-co2perCap$country=="United States" # finding the index were United States is true. 
 co2QT<-t(co2perCap[QT,c("X1925","X1950","X2014")]) # Indexing based on the country and year.  The function t() is transpose, so the table can be easily formated
